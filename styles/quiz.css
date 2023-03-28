@@ -1,0 +1,492 @@
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/quiz.scss ***!
+  \***************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@1,400;1,500;1,700&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/quiz.scss (1) ***!
+  \*******************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boder-box;
+}
+
+body {
+  background-color: #b9dbcd;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #004437;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 3px 10px 5px #06332b;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.logo h1 {
+  color: #f8ae29;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: light;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  font-weight: normal;
+}
+.menu li {
+  color: #f6faf8;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+.menu li strong {
+  text-shadow: 0px 0px 2px #ffb9b3;
+}
+.menu li a {
+  text-decoration: none;
+  color: #f6faf8;
+}
+.menu li:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+}
+
+.hidden-menu {
+  display: none;
+  position: relative;
+}
+@media screen and (max-width: 640px) {
+  .hidden-menu {
+    display: flex;
+  }
+}
+
+.hide-menu {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.hide-menu .stick {
+  top: 20px;
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #f6faf8;
+}
+.hide-menu .stick-one {
+  top: 10px;
+}
+.hide-menu .stick-tree {
+  top: 30px;
+}
+.hide-menu:hover {
+  cursor: pointer;
+}
+
+.burger-menu {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  right: -30px;
+  top: 10px;
+  width: 320px;
+  height: 150px;
+  background-color: #b9dbcd;
+  border: 5px solid #06332b;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px #004437;
+  text-transform: uppercase;
+  z-index: 5;
+}
+.burger-menu ul {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.burger-menu li {
+  display: flex;
+  position: relative;
+  list-style: none;
+  margin: 10px auto;
+  color: #06332b;
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.burger-menu li a {
+  text-decoration: none;
+  color: #06332b;
+}
+
+.burger-menu.show-menu {
+  display: flex;
+}
+
+.hide-menu.show-menu {
+  z-index: 15;
+}
+.hide-menu.show-menu .stick-tree {
+  display: none;
+}
+.hide-menu.show-menu .stick {
+  top: 40px;
+  right: 10px;
+  background-color: #06332b;
+}
+.hide-menu.show-menu .stick-one {
+  transform: rotate(45deg);
+}
+.hide-menu.show-menu .stick-two {
+  transform: rotate(-45deg);
+}
+
+main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 1000px;
+  height: 100%;
+  border: 3px solid #06332b;
+  border-radius: 15px;
+  z-index: 0;
+}
+@media screen and (max-width: 999px) {
+  main {
+    width: 95%;
+    height: 120vh;
+  }
+}
+
+.question-list {
+  display: flex;
+  position: relative;
+  background-color: #06332b;
+  color: #f6faf8;
+  justify-content: space-around;
+  font-weight: 200;
+  width: 90%;
+  border-radius: 15px;
+  top: 10px;
+  padding: 10px 0;
+}
+.question-list .questions {
+  display: flex;
+  position: relative;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-list .questions li {
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 10px 5px;
+  border-radius: 15px;
+  font-weight: 400;
+}
+@media screen and (max-width: 830px) {
+  .question-list .questions {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .question-list .questions li {
+    padding: 0px 5px;
+  }
+}
+.question-list .active-type {
+  background-color: #004437;
+}
+
+.current-question {
+  display: flex;
+  position: relative;
+  background-color: #06332b;
+  color: #f6faf8;
+  width: 90%;
+  border-radius: 15px;
+  top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 200;
+}
+.current-question .bird {
+  display: flex;
+  position: relative;
+  margin: 5px;
+}
+.current-question .bird img {
+  border-radius: 15px;
+  width: 220px;
+}
+.current-question .player-and-name {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+}
+.current-question .player-and-name .player {
+  display: flex;
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  justify-content: center;
+}
+.current-question .player-and-name .name {
+  font-size: 24px;
+}
+@media screen and (max-width: 750px) {
+  .current-question .bird img {
+    width: 100px;
+    height: 77px;
+  }
+}
+
+.answers-and-info {
+  display: grid;
+  position: relative;
+  width: 90%;
+  margin: 25px auto 0 auto;
+  grid-template-columns: 40% 60%;
+  color: #b9dbcd;
+}
+.answers-and-info .answer-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #06332b;
+  border-radius: 15px;
+  margin: 5px;
+}
+.answers-and-info .answer-list li {
+  display: flex;
+  position: relative;
+  list-style-type: none;
+  margin: 0 10px;
+  padding: 10px;
+  align-items: center;
+}
+.answers-and-info .answer-list li:hover {
+  background-color: #004437;
+}
+.answers-and-info .answer-list li:first-child {
+  margin-top: 10px;
+}
+.answers-and-info .answer-list li:last-of-type {
+  margin-bottom: 10px;
+}
+.answers-and-info .answer-list li .indicator {
+  width: 5px;
+  height: 5px;
+  background-color: #f6faf8;
+  margin-right: 15px;
+}
+@media screen and (max-width: 750px) {
+  .answers-and-info .answer-list li {
+    margin: 0 10px;
+    padding: 0;
+  }
+}
+.answers-and-info .about-and-info {
+  display: flex;
+  position: relative;
+  background-color: #06332b;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.answers-and-info .about-and-info .info {
+  display: flex;
+  position: relative;
+  width: 90%;
+}
+.answers-and-info .about-and-info .info img {
+  border-radius: 15px;
+  margin-right: 10px;
+}
+.answers-and-info .about-and-info .info .name-of-bird {
+  width: 100%;
+}
+.answers-and-info .about-and-info .info .get-info {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .answers-and-info .about-and-info .info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .answers-and-info .about-and-info .info .get-info {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #004437;
+    border: none;
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    color: #b9dbcd;
+    font-size: 18px;
+    font-weight: 200;
+    border-radius: 15px;
+  }
+  .answers-and-info .about-and-info .info .get-info:hover {
+    box-shadow: 0 0 6px 1px #b9dbcd;
+  }
+  .answers-and-info .about-and-info .info .get-info:active {
+    box-shadow: 0 0 6px 1px "white";
+    background-color: #b9dbcd;
+    color: #06332b;
+    font-weight: bold;
+  }
+  .answers-and-info .about-and-info .about {
+    display: none;
+  }
+  .answers-and-info .about-and-info .place-to-audio {
+    display: none;
+  }
+}
+.answers-and-info .nothing {
+  display: none;
+}
+.answers-and-info .hidden-info {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  left: 10%;
+  width: 80%;
+  height: 400px;
+  top: -130px;
+  background-color: #b9dbcd;
+  border: 3px solid #06332b;
+  border-radius: 20px;
+  z-index: 4;
+}
+.answers-and-info .hidden-info .close-info {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 30;
+  height: 30;
+}
+.answers-and-info .hidden-info .close-info .stick {
+  display: flex;
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #06332b;
+}
+.answers-and-info .hidden-info .close-info .left-stick {
+  transform: rotate(45deg);
+  left: 30px;
+}
+.answers-and-info .hidden-info .close-info .right-stick {
+  transform: rotate(-45deg);
+}
+.answers-and-info .hidden-info .about-bird {
+  color: #06332b;
+}
+.answers-and-info .hidden-info .bird-voice {
+  width: 100%;
+}
+.answers-and-info .hidden-info .bird-voice audio {
+  width: 90%;
+  margin-top: 20px;
+}
+.answers-and-info .show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  width: 85%;
+}
+
+.next-question {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: #b9dbcd;
+  background-color: #494d4c;
+  border: 3px solid #242525;
+  border-radius: 15px;
+  width: 90%;
+  height: 50px;
+  margin: 10px auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.works {
+  background-color: #06332b;
+  border: none;
+}
+.works:hover {
+  background-color: #004437;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  color: #f6faf8;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #06332b;
+  box-shadow: 0px -1px 5px 2px #004437;
+}
+.footer-list li {
+  display: flex;
+  position: relative;
+  list-style-type: none;
+}
+.footer-list li a {
+  cursor: pointer;
+}

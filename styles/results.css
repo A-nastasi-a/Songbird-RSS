@@ -1,0 +1,324 @@
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/results.scss ***!
+  \******************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@1,400;1,500;1,700&display=swap);
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/results.scss (1) ***!
+  \**********************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: boder-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: #b9dbcd;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #004437;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 3px 10px 5px #06332b;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.logo h1 {
+  color: #f8ae29;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: light;
+}
+
+.menu {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  font-weight: normal;
+}
+.menu li {
+  color: #f6faf8;
+  display: flex;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+.menu li strong {
+  text-shadow: 0px 0px 2px #ffb9b3;
+}
+.menu li a {
+  text-decoration: none;
+  color: #f6faf8;
+}
+.menu li:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+}
+
+.hidden-menu {
+  display: none;
+  position: relative;
+}
+@media screen and (max-width: 640px) {
+  .hidden-menu {
+    display: flex;
+  }
+}
+
+.hide-menu {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.hide-menu .stick {
+  top: 20px;
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #f6faf8;
+}
+.hide-menu .stick-one {
+  top: 10px;
+}
+.hide-menu .stick-tree {
+  top: 30px;
+}
+.hide-menu:hover {
+  cursor: pointer;
+}
+
+.burger-menu {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  right: -30px;
+  top: 10px;
+  width: 320px;
+  height: 150px;
+  background-color: #b9dbcd;
+  border: 5px solid #06332b;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px #004437;
+  text-transform: uppercase;
+  z-index: 5;
+}
+.burger-menu ul {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.burger-menu li {
+  display: flex;
+  position: relative;
+  list-style: none;
+  margin: 10px auto;
+  color: #06332b;
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.burger-menu li a {
+  text-decoration: none;
+  color: #06332b;
+}
+
+.burger-menu.show-menu {
+  display: flex;
+}
+
+.hide-menu.show-menu {
+  z-index: 15;
+}
+.hide-menu.show-menu .stick-tree {
+  display: none;
+}
+.hide-menu.show-menu .stick {
+  top: 40px;
+  right: 10px;
+  background-color: #06332b;
+}
+.hide-menu.show-menu .stick-one {
+  transform: rotate(45deg);
+}
+.hide-menu.show-menu .stick-two {
+  transform: rotate(-45deg);
+}
+
+main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: 1100px;
+  height: 100%;
+  border: 3px solid #06332b;
+  border-radius: 15px;
+  z-index: 0;
+}
+@media screen and (max-width: 999px) {
+  main {
+    width: 95%;
+    margin: 50px auto;
+  }
+}
+
+.question-list {
+  display: flex;
+  position: relative;
+  background-color: #06332b;
+  color: #f6faf8;
+  justify-content: space-around;
+  font-weight: 200;
+  width: 90%;
+  border-radius: 15px;
+  top: 10px;
+  padding: 10px 0;
+}
+.question-list .questions {
+  display: flex;
+  position: relative;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-list .questions li {
+  list-style-type: none;
+  margin: 0 5px;
+  padding: 10px 5px;
+  border-radius: 15px;
+}
+@media screen and (max-width: 830px) {
+  .question-list .questions {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .question-list .questions li {
+    padding: 0px 5px;
+  }
+}
+.question-list .active-type {
+  background-color: #004437;
+}
+
+.result-window {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #06332b;
+  justify-content: center;
+  align-items: center;
+  color: #b9dbcd;
+  font-family: "Montserrat", sans-serif;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+.result-window h2 {
+  font-weight: 600;
+  font-size: 54px;
+}
+.result-window p {
+  font-size: 34px;
+  font-weight: 200;
+  text-align: center;
+  width: 95%;
+  margin: 5px auto;
+}
+.result-window hr {
+  display: flex;
+  position: relative;
+  width: 90%;
+  border: none;
+  color: #004437;
+  background-color: #004437;
+  height: 2px;
+  margin: 10px auto;
+}
+.result-window .came-back {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #004437;
+  border: none;
+  width: 80%;
+  height: 50px;
+  margin: 10px auto;
+  color: #b9dbcd;
+  font-size: 24px;
+  font-weight: 200;
+}
+.result-window .came-back:hover {
+  box-shadow: 0 0 6px 1px #b9dbcd;
+}
+.result-window .came-back:active {
+  box-shadow: 0 0 6px 1px "white";
+  background-color: #b9dbcd;
+  color: #06332b;
+  font-weight: bold;
+}
+.result-window .hidden-items {
+  display: none;
+}
+@media screen and (max-width: 540px) {
+  .result-window h2 {
+    font-weight: 400;
+    font-size: 34px;
+  }
+  .result-window .came-back {
+    font-size: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  align-items: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  color: #f6faf8;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-list {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #06332b;
+  box-shadow: 0px -1px 5px 2px #004437;
+}
+.footer-list li {
+  display: flex;
+  position: relative;
+  list-style-type: none;
+}
+.footer-list li a {
+  cursor: pointer;
+}
